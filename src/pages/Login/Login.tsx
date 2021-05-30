@@ -1,9 +1,8 @@
+import LoginLayout from 'components/molecules/Login/LoginLayout';
 import React from 'react';
 
 const LoginPage: React.FC = () => (
-  <div>
-    Login
-  </div>
+  <LoginLayout />
 );
 
 export default LoginPage;

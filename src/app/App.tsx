@@ -3,7 +3,7 @@ import { GlobalStyle } from 'components/layouts/GlobalStyle';
 import PrivateRoute from 'components/molecules/PrivateRoute';
 import LoginPage from 'pages/Login';
 import React from 'react';
-import { BrowserRouter as Router, Redirect, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import routes from 'shared/constants/routes';
 
 const {

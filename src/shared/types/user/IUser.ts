@@ -1,8 +1,5 @@
 import { EUserRoles } from './EUserRoles'
 import { IUserProfile } from './IUserProfile'
-
-type toDefineCouponType = any
-
 interface IUser {
   id: number
   first_name: string
