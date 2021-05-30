@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# React TypeScript Boilerplate
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Atomic design is used in this proyect boilerplate.
+
+## Libraries used
+* Axios
+* React If
+* React Material UI
+* Styled Components
 
 ## Available Scripts
 
