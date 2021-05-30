@@ -4,8 +4,8 @@ import React from "react";
 export const Copyright = () => (
   <Typography variant="body2" color="textSecondary" align="center">
     {'Copyright © '}
-    <Link color="inherit" href="https://material-ui.com/">
-      Your Website
+    <Link color="inherit" href="https://franzet.com/">
+      Franzet.com
     </Link>{' '}
     {new Date().getFullYear()}
     {'.'}

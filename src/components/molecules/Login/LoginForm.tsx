@@ -1,9 +1,11 @@
 import React from 'react';
-import { TextField, FormControlLabel, Checkbox, Button, Grid, Box, Link } from '@material-ui/core';
+import { TextField, FormControlLabel, Checkbox, Grid, Box, Link } from '@material-ui/core';
 import Copyright from '../Copyright';
+import Form from 'components/atoms/Form';
+import { LoginButton } from 'components/atoms/Login/LoginButton';
 
 const LoginForm: React.FC = () => (
-  <form noValidate>
+  <Form noValidate>
     <TextField
       variant="outlined"
       margin="normal"
@@ -30,14 +32,14 @@ const LoginForm: React.FC = () => (
       control={<Checkbox value="remember" color="primary" />}
       label="Remember me"
     />
-    <Button
+    <LoginButton
       type="submit"
       fullWidth
       variant="contained"
       color="primary"
     >
       Sign In
-            </Button>
+    </LoginButton>
     <Grid container>
       <Grid item xs>
         <Link href="#" variant="body2">
@@ -53,7 +55,7 @@ const LoginForm: React.FC = () => (
     <Box mt={5}>
       <Copyright />
     </Box>
-  </form>
+  </Form>
 );
 
 export default LoginForm;
