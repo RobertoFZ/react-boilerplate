@@ -7,7 +7,7 @@ interface IGridWithImageBg {
 
 export const GridWithImageBg = styled(Grid)`
 	background-image: url(${({
-		background = 'https://source.unsplash.com/random',
+		background = 'https://source.unsplash.com/featured/?nature',
 	}: IGridWithImageBg) => background});
 	background-repeat: no-repeat;
 	background-size: cover;
