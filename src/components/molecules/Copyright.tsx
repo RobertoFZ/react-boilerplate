@@ -1,15 +1,15 @@
-import { Link, Typography } from "@material-ui/core";
-import React from "react";
+import React from 'react'
+import { Link, Typography } from '@material-ui/core'
 
-export const Copyright = () => (
-  <Typography variant="body2" color="textSecondary" align="center">
-    {'Copyright © '}
-    <Link color="inherit" href="https://franzet.com/">
-      Franzet.com
-    </Link>{' '}
-    {new Date().getFullYear()}
-    {'.'}
-  </Typography>
-);
+export const Copyright = (): JSX.Element => (
+	<Typography variant="body2" color="textSecondary" align="center">
+		{'Copyright © '}
+		<Link color="inherit" href="https://coati.mx/">
+			Coati.mx
+		</Link>{' '}
+		{new Date().getFullYear()}
+		{'.'}
+	</Typography>
+)
 
-export default Copyright;
+export default Copyright

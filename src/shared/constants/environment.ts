@@ -1,5 +1,5 @@
 const environment = {
-  apiUrl: process.env.REACT_APP_API_URL,
-};
+	apiUrl: process.env.REACT_APP_API_URL,
+}
 
-export { environment };
+export { environment }

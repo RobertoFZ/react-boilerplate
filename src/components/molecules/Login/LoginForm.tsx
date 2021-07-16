@@ -1,61 +1,52 @@
-import React from 'react';
-import { TextField, FormControlLabel, Checkbox, Grid, Box, Link } from '@material-ui/core';
-import Copyright from '../Copyright';
-import Form from 'components/atoms/Form';
-import { LoginButton } from 'components/atoms/Login/LoginButton';
+import React from 'react'
+import { TextField, Box } from '@material-ui/core'
+import Copyright from '../Copyright'
+import Form from 'components/atoms/Form'
+import { LoginButton } from 'components/atoms/Login/LoginButton'
+import { useForm } from 'react-hook-form'
+import { ToBeDefined } from 'shared/types/common/ToBeDefined'
 
-const LoginForm: React.FC = () => (
-  <Form noValidate>
-    <TextField
-      variant="outlined"
-      margin="normal"
-      required
-      fullWidth
-      id="email"
-      label="Email Address"
-      name="email"
-      autoComplete="email"
-      autoFocus
-    />
-    <TextField
-      variant="outlined"
-      margin="normal"
-      required
-      fullWidth
-      name="password"
-      label="Password"
-      type="password"
-      id="password"
-      autoComplete="current-password"
-    />
-    <FormControlLabel
-      control={<Checkbox value="remember" color="primary" />}
-      label="Remember me"
-    />
-    <LoginButton
-      type="submit"
-      fullWidth
-      variant="contained"
-      color="primary"
-    >
-      Sign In
-    </LoginButton>
-    <Grid container>
-      <Grid item xs>
-        <Link href="#" variant="body2">
-          Forgot password?
-        </Link>
-      </Grid>
-      <Grid item>
-        <Link href="#" variant="body2">
-          {"Don't have an account? Sign Up"}
-        </Link>
-      </Grid>
-    </Grid>
-    <Box mt={5}>
-      <Copyright />
-    </Box>
-  </Form>
-);
+const LoginForm: React.FC = () => {
+	const { register, handleSubmit } = useForm()
 
-export default LoginForm;
+	const onSubmit = (data: ToBeDefined) => alert(JSON.stringify(data))
+
+	return (
+		<Form noValidate onSubmit={handleSubmit(onSubmit)}>
+			<TextField
+				variant="outlined"
+				margin="normal"
+				required
+				fullWidth
+				id="email"
+				label="Correo electrónico"
+				autoComplete="email"
+				autoFocus
+				{...register('email')}
+			/>
+			<TextField
+				variant="outlined"
+				margin="normal"
+				required
+				fullWidth
+				label="Contraseña"
+				type="password"
+				id="password"
+				{...register('password')}
+			/>
+			<LoginButton
+				type="submit"
+				fullWidth={true}
+				variant="contained"
+				color="primary"
+			>
+				Entrar
+			</LoginButton>
+			<Box mt={5}>
+				<Copyright />
+			</Box>
+		</Form>
+	)
+}
+
+export default LoginForm

@@ -16,6 +16,7 @@
     "axios": "^0.21.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-hook-form": "^7.11.0",
     "react-if": "^4.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
@@ -27,13 +28,14 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src/**/*.ts",
+    "format": "eslint src/**/*.ts --fix"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build && npm run lint"
+    }
   },
   "browserslist": {
     "production": [
@@ -49,6 +51,9 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.1.7",
-    "@types/styled-components": "^5.1.9"
+    "@types/styled-components": "^5.1.9",
+    "eslint": "^7.30.0",
+    "husky": "^4.3.8",
+    "prettier": "^2.3.2"
   }
 }

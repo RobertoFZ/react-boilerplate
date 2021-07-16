@@ -5,25 +5,25 @@ import routes from 'shared/constants/routes'
 import useUserService from 'services/user/useUserService'
 
 const PrivateRoute: FC<RouteProps> = ({
-  children,
-  ...routeProps
+	children,
+	...routeProps
 }: RouteProps) => {
-  const { login } = routes
-  const { isLoggedIn } = useUserService()
+	const { login } = routes
+	const { isLoggedIn } = useUserService()
 
-  return (
-    <Route
-      {...routeProps}
-      render={() => (
-        <If condition={isLoggedIn}>
-          <Then>{children}</Then>
-          <Else>
-            <Redirect to={login} />
-          </Else>
-        </If>
-      )}
-    />
-  )
+	return (
+		<Route
+			{...routeProps}
+			render={() => (
+				<If condition={isLoggedIn}>
+					<Then>{children}</Then>
+					<Else>
+						<Redirect to={login} />
+					</Else>
+				</If>
+			)}
+		/>
+	)
 }
 
 export default PrivateRoute

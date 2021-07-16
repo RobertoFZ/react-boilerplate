@@ -4,12 +4,12 @@ import IFetchResponse from 'shared/types/common/IFetchResponse'
 import { environment } from 'shared/constants'
 const { apiUrl } = environment
 
-const loginUser = async (body: ILoginUserBody) => {
-  const response = await axios.post<IFetchResponse<IAuthResponse>>(
-    `${apiUrl}/auth/login`,
-    body
-  )
-  return response.data.data
+const loginUser = async (body: ILoginUserBody): Promise<IAuthResponse> => {
+	const response = await axios.post<IFetchResponse<IAuthResponse>>(
+		`${apiUrl}/auth/login`,
+		body
+	)
+	return response.data.data
 }
 
 export { loginUser }
