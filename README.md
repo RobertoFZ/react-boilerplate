@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Atomic design is used in this proyect boilerplate.
+Atomic design is used in this project boilerplate.
 
 ## Libraries used
 * Axios
