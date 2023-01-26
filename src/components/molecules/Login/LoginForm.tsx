@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextField, Box } from '@material-ui/core'
+import { TextField, Box } from '@mui/material'
 import Copyright from '../Copyright'
 import Form from 'components/atoms/Form'
 import { LoginButton } from 'components/atoms/Login/LoginButton'

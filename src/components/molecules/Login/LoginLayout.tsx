@@ -1,9 +1,9 @@
 import React from 'react'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
+import CssBaseline from '@mui/material/CssBaseline'
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
 import GridFullHeight from 'components/atoms/GridFullHeight'
 import { GridWithImageBg } from 'components/atoms/GridWithImageBg'
-import { Avatar, Grid, Paper, Typography } from '@material-ui/core'
+import { Avatar, Grid, Paper, Typography } from '@mui/material'
 import { PaperContainer } from 'components/atoms/PaperContainer'
 import LoginForm from './LoginForm'
 

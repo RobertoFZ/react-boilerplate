@@ -10,8 +10,8 @@ import {
 	TableHead,
 	TableRow,
 	Typography,
-} from '@material-ui/core'
-import GetAppIcon from '@material-ui/icons/GetApp'
+} from '@mui/material'
+import GetAppIcon from '@mui/icons-material/GetApp'
 import { IReport } from 'shared/types/report/IReport'
 import { getAllReports } from 'services/report'
 import { useEffect } from 'react'

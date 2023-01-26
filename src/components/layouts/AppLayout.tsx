@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import { blueGrey, teal } from '@material-ui/core/colors'
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import IconButton from '@material-ui/core/IconButton'
-import MenuIcon from '@material-ui/icons/Menu'
+import AppBar from '@mui/material/AppBar'
+import Toolbar from '@mui/material/Toolbar'
+import { blueGrey, teal } from '@mui/material/colors'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+import CssBaseline from '@mui/material/CssBaseline'
+import IconButton from '@mui/material/IconButton'
+import MenuIcon from '@mui/icons-material/Menu'
 import Copyright from 'components/molecules/Copyright'
 import useUserService from 'services/user/useUserService'
 import { When } from 'react-if'
-import { FormControlLabel, Menu, MenuItem, Switch } from '@material-ui/core'
+import { FormControlLabel, Menu, MenuItem, Switch } from '@mui/material'
 import { ToBeDefined } from 'shared/types/common/ToBeDefined'
 
 const AppLayout: React.FC = ({ children }): JSX.Element => {
@@ -20,9 +20,9 @@ const AppLayout: React.FC = ({ children }): JSX.Element => {
 	const [anchorEl, setAnchorEl] = React.useState(null)
 	const { isLoggedIn } = useUserService()
 
-	const darkTheme = createMuiTheme({
+	const darkTheme = createTheme({
 		palette: {
-			type: palletType,
+			mode: palletType,
 			primary: {
 				main: mainPrimaryColor,
 			},

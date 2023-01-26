@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Typography } from '@material-ui/core'
+import { Link, Typography } from '@mui/material'
 
 export const Copyright = (): JSX.Element => (
 	<Typography variant="body2" color="textSecondary" align="center">
